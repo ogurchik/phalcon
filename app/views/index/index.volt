@@ -7,6 +7,9 @@
 			<td>
 				{{ user.email}}
 			</td>
+			<td>
+				
+			</td>
 		</tr>
 {% endfor %}
 </table>
