@@ -7,7 +7,7 @@ class IndexController extends ControllerBase
     {
 		$users = Users::find();
 		$this->view->users = $users;
-    }
+	}
 
 }
 
