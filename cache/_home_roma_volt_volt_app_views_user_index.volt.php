@@ -1,6 +1,6 @@
 <h3> User with <?= $userID ?> </h3>
-<p> Paragraf </p>
-<?= $this->tag->form(['/user', 'id' => 'registerForm', 'onbeforesubmit' => 'return false']) ?>
+<p> <?= $this->getContent() ?> </p>
+<?= $this->tag->form(['/user/'->userID, 'id' => 'registerForm', 'onbeforesubmit' => 'return false']) ?>
 	<div>
 		<?= $form->label('city') ?>
 		<?= $form->render('city') ?>

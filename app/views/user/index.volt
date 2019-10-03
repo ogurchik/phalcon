@@ -1,6 +1,6 @@
 <h3> User with {{ userID }} </h3>
-<p> Paragraf </p>
-{{ form ('/user', 'id': 'registerForm', 'onbeforesubmit': 'return false') }}
+<p> {{ content() }} </p>
+{{ form ('/user/' . userID, 'id': 'registerForm', 'onbeforesubmit': 'return false') }}
 	<div>
 		{{ form.label('city') }}
 		{{ form.render('city') }}

@@ -12,7 +12,7 @@ class UserController extends \Phalcon\Mvc\Controller
 			$postReq = $this->request->getPost();
 			if ($form->isValid($postReq) == false) {
 			    $this->flash->error("ahtung!");
-				return $this->dispatcher;	
+				return true;	
 			}
 			
 		}
