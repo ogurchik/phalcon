@@ -1,4 +1,4 @@
-<h3> User with <?= $id ?> </h3>
+<h3> User with <?= $userID ?> </h3>
 <p> Paragraf </p>
 <?= $this->tag->form(['/user', 'id' => 'registerForm', 'onbeforesubmit' => 'return false']) ?>
 	<div>
@@ -20,6 +20,13 @@
 		<?= $form->label('street') ?>
 		<?= $form->render('street') ?>
 	</div>
+	
+	
+	
+	<?= $this->tag->hiddenField(['value' => $userID, 'name' => 'userID']) ?>
+	
+	
+	
 	<div>
 		<?= $this->tag->submitButton(['Send']) ?>
 	</div>

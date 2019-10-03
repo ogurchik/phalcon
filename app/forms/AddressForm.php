@@ -64,5 +64,20 @@ class AddressForm extends Form
 		);
 		$this->add($street);
 
+		$userID = new Text('userID');
+		$userID->setLabel('userID');
+		$userID->setFilters(['string']);
+		$userID->addValidators(
+			[
+				new PresenceOf(
+					[
+						'message' => 'userID is required',
+					]
+				),
+			]
+		);
+		$this->add($userID);
+
+
 	}
 }

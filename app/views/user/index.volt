@@ -1,4 +1,4 @@
-<h3> User with {{ user_id }} </h3>
+<h3> User with {{ userID }} </h3>
 <p> Paragraf </p>
 {{ form ('/user', 'id': 'registerForm', 'onbeforesubmit': 'return false') }}
 	<div>
@@ -20,6 +20,13 @@
 		{{ form.label('street') }}
 		{{ form.render('street') }}
 	</div>
+	
+	
+	
+	{{ hidden_field('value' : userID, 'name' : 'userID') }}
+	
+	
+	
 	<div>
 		{{ submit_button('Send')}}
 	</div>
