@@ -1,25 +1,17 @@
 <h3> User with <?= $userID ?> </h3>
 <p> <?= $this->getContent() ?> </p>
-<?= $this->tag->form(['/user/'->userID, 'id' => 'registerForm', 'onbeforesubmit' => 'return false']) ?>
-	<div>
+<?= $this->tag->form(['/user/' . $userID, 'id' => 'registerForm', 'onbeforesubmit' => 'return false']) ?>
 		<?= $form->label('city') ?>
 		<?= $form->render('city') ?>
-	</div>	
 		
-	<div>
 		<?= $form->label('postcode') ?>
 		<?= $form->render('postcode') ?>
-	</div>
 		
-	<div>
 		<?= $form->label('region') ?>
 		<?= $form->render('region') ?>
-	</div>
 	
-	<div>	
 		<?= $form->label('street') ?>
 		<?= $form->render('street') ?>
-	</div>
 	
 	
 	
@@ -27,7 +19,6 @@
 	
 	
 	
-	<div>
 		<?= $this->tag->submitButton(['Send']) ?>
-	</div>
-</form>
+<?= $this->tag->endForm() ?>
+<p> paragraf </p>
